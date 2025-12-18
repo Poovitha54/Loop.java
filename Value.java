@@ -1,16 +1,13 @@
 import java.util.Scanner;
-
-public class Value {
-     public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        String bin=sc.next();
-        int ones=0,zeros=0;
+        int n =sc.nextInt();
+        String bin="";
 
-        for(char c:bin.toCharArray()) {
-            if(c=='1')ones++;
-            else if(c=='0')zeros++;
+        while(n>0){
+            bin=(n%2) + bin;
+            n/=2;
         }
-        System.out.println("1s = "+ones);
-        System.out.println("0s = "+zeros);
+        System.out.println(bin);
 }
 }
